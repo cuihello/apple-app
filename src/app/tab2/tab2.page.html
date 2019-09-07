@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title text-center="center">
+      机场大巴预约
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>请选择目的地</ion-list-header>
+    <ion-item>
+      <ion-label>目的地</ion-label>
+      <ion-select (ionChange)="getsvalue($event)" okText="确定" cancelText="取消">
+        <ion-select-option *ngFor="let addr of addrs" [value]="addr">{{addr}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>请选择发车时间</ion-list-header>
+    <ion-item>
+      <ion-label>发车时间</ion-label>
+      <ion-select (ionChange)="gettime($event)" okText="确定" cancelText="取消">
+        <ion-select-option *ngFor="let time of times" [value]="time">{{time}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-card>
+    <ion-button expand="full" color="success" *ngIf="show" (click)="getbus()">预约大巴</ion-button>
+    <ion-button expand="full" color="warning" *ngIf="!show" (click)="cancelbus()">取消预约</ion-button>
+  </ion-card>
+  
+  <ion-card>
+    <ion-card-header text-center="center"><ion-label >上车码</ion-label></ion-card-header>
+    <ion-card-content><img src="{{img}}"></ion-card-content>
+  </ion-card>
+
+</ion-content>

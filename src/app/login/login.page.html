@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="primary" text-center="center">
+    <ion-icon name="book"></ion-icon>
+    <ion-title>
+      welcome!
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="primary">
+  <ng-form padding #ngform>
+    <ion-item >
+      <ion-icon name="person" color="primary"></ion-icon>
+      <ion-input name="admin" #adm placeholder="请输入用户名" type="text" required="true" minlength="6" maxlength="20"autofocus="true"></ion-input>
+    </ion-item>
+    <ion-item >
+      <ion-icon name="lock" color="primary"></ion-icon>
+      <ion-input name="psd" #psw  placeholder="请输入密码" type="password" minlength="6" maxlength="12" required="true"></ion-input>
+    </ion-item>
+    <ion-button color="warning" expand="full" shape="round" type="submit" (click)="getuse(adm,psw)">登录</ion-button>
+    <ion-button color="medium" expand="full" shape="round" routerLink="/register">注册</ion-button>
+  </ng-form>
+</ion-content>

@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title text-center="center">
+      出租车预约
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card margin>
+    <ion-list lines="none">
+      <ion-item>
+        <ion-icon slot="start" color="medium" name="book"></ion-icon>
+        <ion-label>当前叫号</ion-label>
+        <ion-label>3</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" color="medium" name="body"></ion-icon>
+        <ion-label>上车口</ion-label>
+        <ion-label>A1</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" color="medium" name="contact"></ion-icon>
+        <ion-label>我的号码</ion-label>
+        <ion-label>{{my1}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" color="medium" name="microphone"></ion-icon>
+        <ion-button size="small" *ngIf="curson1" (click)="sure1($event);call()" [disabled]="show">叫号</ion-button>
+        <ion-button size="small" *ngIf="!curson1" (click)="nosure1($event);nocall()">取消叫号</ion-button>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card margin>
+    <ion-list lines="none">
+      <ion-item>
+        <ion-icon slot="start" color="medium" name="book"></ion-icon>
+        <ion-label>当前叫号</ion-label>
+        <ion-label>4</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" color="medium" name="body"></ion-icon>
+        <ion-label>上车口</ion-label>
+        <ion-label>A2</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" color="medium" name="contact"></ion-icon>
+        <ion-label>我的号码</ion-label>
+        <ion-label>{{my2}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" color="medium" name="microphone"></ion-icon>
+        <ion-button size="small" *ngIf="curson2" [disabled]="show" (click)="sure2($event);call()">叫号</ion-button>
+        <ion-button size="small" *ngIf="!curson2" (click)="nosure2($event);nocall()">取消叫号</ion-button>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card margin>
+    <ion-list lines="none">
+      <ion-item>
+        <ion-icon slot="start" color="medium" name="book"></ion-icon>
+        <ion-label>当前叫号</ion-label>
+        <ion-label>9</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" color="medium" name="body"></ion-icon>
+        <ion-label>上车口</ion-label>
+        <ion-label>A3</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" color="medium" name="contact"></ion-icon>
+        <ion-label>我的号码</ion-label>
+        <ion-label>{{my3}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" color="medium" name="microphone"></ion-icon>
+        <ion-button size="small" *ngIf="curson3" [disabled]="show" (click)="sure3($event);call()">叫号</ion-button>
+        <ion-button size="small" *ngIf="!curson3" (click)="nosure3($event);nocall()">取消叫号</ion-button>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+
+</ion-content>

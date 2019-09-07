@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title text-center="center">我</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-item color="light" margin (click)="moremes()">
+  <ion-avatar slot="start">
+    <img src="../assets/image/ava.jpg">
+  </ion-avatar>
+  <ion-label>{{usename}}</ion-label>
+  <ion-icon name="arrow-dropright" slot="end"></ion-icon>
+</ion-item>
+
+  <ion-list>
+    <ion-item (click)="sysmes()">
+      <ion-icon name="mail" slot="start"></ion-icon>
+      <ion-label>系统消息</ion-label>
+      <ion-label position="fixed" color="medium" >3条未读</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item (click)="bus()">
+      <ion-icon name="subway" slot="start"></ion-icon>
+      <ion-label>机场大巴预定</ion-label>
+      <ion-label position="fixed" color="medium" color="success">已预定</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item (click)="park()">
+      <ion-icon name="logo-flickr" slot="start"></ion-icon>
+      <ion-label>机场停车位预定</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+  <ion-item (click)="car()">
+    <ion-icon name="logo-model-s" slot="start"></ion-icon>
+    <ion-label>出租车预定</ion-label>
+    <ion-label position="fixed" color="success" ></ion-label>
+  </ion-item>
+  </ion-list>
+
+  <ion-item color="light"></ion-item>
+  <ion-list>
+    <ion-item (click)="seting()">
+      <ion-icon name="settings" slot="start"></ion-icon>
+      <ion-label>设置</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

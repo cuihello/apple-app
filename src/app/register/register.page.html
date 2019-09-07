@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary"  text-center="center">
+    <ion-icon name="book"></ion-icon>
+    <ion-title>
+      welcome!
+    </ion-title>
+    <ion-icon name="arrow-back" slot="start" size="large" (click)="back()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="primary" margin-top>
+  <ng-form padding>
+    <ion-item>
+      <ion-icon name="person" color="primary"></ion-icon>
+      <ion-label>用户名</ion-label><ion-input required="true" minlength="6" maxlength="20"autofocus="true" #usen></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="mail" color="primary"></ion-icon>
+      <ion-label>邮箱</ion-label><ion-input type="email" #email></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="lock" color="primary"></ion-icon>
+      <ion-label>密码</ion-label><ion-input minlength="6" type="password" maxlength="20" #pass></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="lock" color="primary"></ion-icon>
+      <ion-label>确认密码</ion-label><ion-input minlength="6" type="password" maxlength="20" #spass></ion-input>
+    </ion-item>
+    <ion-button color="warning" type="submit" expand="full" routerLink="/login" (click)="regis(usen,email,pass,spass)">注册</ion-button>
+  </ng-form>
+</ion-content>

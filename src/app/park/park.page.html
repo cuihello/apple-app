@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>停车位</ion-title>
+    <ion-icon name="arrow-back" size="large" slot="start" (click)="back()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list *ngIf="flag">
+      <ion-item (click)="pmore()"><ion-label>停车位预约详情</ion-label><ion-icon name="arrow-dropright" size="large" slot="end"></ion-icon></ion-item>
+      <ion-card><ion-card-content>
+        <ion-item lines="none"><ion-label>你已成功预约{{park}}区停车位</ion-label></ion-item>
+        <ion-item lines="none"><ion-label>{{park}}区还剩余{{count}}个停车位</ion-label></ion-item>
+      </ion-card-content></ion-card>
+    </ion-list>
+
+  <ion-list *ngIf="!flag">
+    <ion-item (click)="pmore()"><ion-label>停车位预约详情</ion-label><ion-icon name="arrow-dropright" size="large" slot="end"></ion-icon></ion-item>
+    <ion-card><ion-card-content>
+      <ion-item lines="none"><ion-label>您还未预约停车位</ion-label></ion-item>
+    </ion-card-content></ion-card>
+  </ion-list>
+</ion-content>

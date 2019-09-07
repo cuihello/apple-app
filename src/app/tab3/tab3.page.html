@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title text-center="center">
+      停车位预约
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-item lines="none">
+      <ion-label>区域</ion-label>
+      <ion-label>B</ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>剩余车位</ion-label>
+      <ion-label>{{all[0]}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-button color="success" *ngIf="curson" size="small" [disabled]="show" (click)="sure($event);call()">预约</ion-button>
+      <ion-button color="success" *ngIf="!curson" (click)="nosure($event);nocall()">取消预约</ion-button>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item lines="none">
+      <ion-label>区域</ion-label>
+      <ion-label>C</ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>剩余车位</ion-label>
+      <ion-label>{{all[1]}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-button color="success" *ngIf="curson1" size="small" [disabled]="show" (click)="sure1($event);call()">预约</ion-button>
+      <ion-button color="success" *ngIf="!curson1" (click)="nosure1($event);nocall()">取消预约</ion-button>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item lines="none">
+      <ion-label>区域</ion-label>
+      <ion-label>D</ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>剩余车位</ion-label>
+      <ion-label>{{all[2]}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-button color="success" *ngIf="curson2" size="small" [disabled]="show" (click)="sure2($event);call()">预约</ion-button>
+      <ion-button color="success" *ngIf="!curson2" (click)="nosure2($event);nocall()">取消预约</ion-button>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item lines="none">
+      <ion-label>区域</ion-label>
+      <ion-label>E</ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>剩余车位</ion-label>
+      <ion-label>{{all[3]}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-button color="success" *ngIf="curson3" [disabled]="show" size="small" (click)="sure3($event);call()">预约</ion-button>
+      <ion-button color="success" *ngIf="!curson3" (click)="nosure3($event);nocall()">取消预约</ion-button>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item lines="none">
+      <ion-label>区域</ion-label>
+      <ion-label>F</ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>剩余车位</ion-label>
+      <ion-label>{{all[4]}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-button color="success" *ngIf="curson4" [disabled]="show" size="small" (click)="sure4($event);call()">预约</ion-button>
+      <ion-button color="success" *ngIf="!curson4" (click)="nosure4($event);nocall()">取消预约</ion-button>
+    </ion-item>
+  </ion-card>
+
+</ion-content>
